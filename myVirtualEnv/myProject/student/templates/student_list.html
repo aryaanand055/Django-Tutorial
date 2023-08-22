@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+{% block title %}
+My Tennis Club - List of all members
+{% endblock %}
+
+{% block content %}
+<h1>Members</h1>
+<div class="mycard">
+    <h1>Students</h1>
+    <ul>
+        {% for x in students %}
+        <li onclick="window.location = 'studentdetails/{{ x.id }}'">{{ x.fname }} {{ x.lname }}</li>
+        {% empty %}
+        <li>No students as of now</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

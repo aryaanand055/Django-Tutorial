@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+
+{% block title %}
+Student details {{student.fname}}
+{% endblock %}
+{% block content %}
+
+<h1>{{ student.fname }} {{ student.lname }}</h1>
+
+<p><strong>Phone:</strong> {{ student.phone }}</p>
+<p><strong>Date of Birth :</strong> {{ student.dob }}</p>
+
+<p>Back to <a href="/students">all students</a></p>
+{% endblock %}
